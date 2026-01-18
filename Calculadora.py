@@ -12,21 +12,15 @@ def mostrar_menu():
     print("8. Encontrar máximo y mínimo de 'n' números")
     print("9. Salir del programa")
     print("="*50)
-
 def suma_n_numeros():
     print("\n--- SUMA DE 'N' NÚMEROS ---")
     try:
         n = int(input("¿Cuántos números desea sumar?: "))
-        if n <= 0:
-            print("Debe ingresar un número positivo mayor que cero.")
-            return
         suma = 0
         for i in range(1, n + 1):
-            numero = float(input(f"Ingrese el número {i}: "))
-            suma += numero
-        print(f"\nLa suma de los {n} números es: {suma}")
-    except ValueError:
-     print("Error: Debe ingresar un número válido.")
+            suma += float(input(f"Ingrese el número {i}: "))
+        print(f"\nLa suma total es: {suma}")
+    except ValueError: print("Error: Entrada inválida.")
 def main():
     while True:
         mostrar_menu()
