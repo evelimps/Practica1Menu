@@ -61,3 +61,19 @@ def main():
 
 if __name__ == "__main__":
     main()
+def calcular_factorial():
+    try:
+        num = int(input("Ingrese un número entero para calcular su factorial: "))
+        if num < 0:
+            print("No existe el factorial de números negativos.")
+        else:
+            print(f"El factorial de {num}! es: {math.factorial(num)}")
+    except ValueError: print("Error: Debe ser un número entero.")
+
+def tablas_multiplicar():
+    try:
+        tabla = int(input("¿Qué tabla desea ver? (Seleccione el número): "))
+        print(f"\n--- Tabla del {tabla} ---")
+        for i in range(1, 11):
+            print(f"{tabla} x {i} = {tabla * i}")
+    except ValueError: print("Error: Ingrese un número válido.")
