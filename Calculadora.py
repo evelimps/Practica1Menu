@@ -40,6 +40,45 @@ def division():
         else:
             print(f"Resultado: {n1 / n2}")
     except ValueError: print("Error: Entrada inválida.")
+def calcular_factorial():
+    try:
+        num = int(input("Ingrese un número entero para calcular su factorial: "))
+        if num < 0:
+            print("No existe el factorial de números negativos.")
+        else:
+            print(f"El factorial de {num}! es: {math.factorial(num)}")
+    except ValueError: print("Error: Debe ser un número entero.")
+
+def tablas_multiplicar():
+    try:
+        tabla = int(input("¿Qué tabla desea ver? (Seleccione el número): "))
+        print(f"\n--- Tabla del {tabla} ---")
+        for i in range(1, 11):
+            print(f"{tabla} x {i} = {tabla * i}")
+    except ValueError: print("Error: Ingrese un número válido.")
+def cuadrado_cubo():
+    try:
+        num = float(input("Ingrese el número: "))
+        print(f"Cuadrado: {num**2}")
+        print(f"Cubo: {num**3}")
+    except ValueError: print("Error: Entrada inválida.")
+
+def promedio_serie():
+    print("\n--- PROMEDIO (Ingrese -1 para finalizar) ---")
+    suma = 0
+    contador = 0
+    while True:
+        try:
+            num = float(input("Ingrese número: "))
+            if num == -1: break
+            suma += num
+            contador += 1
+        except ValueError: print("Error: Entrada inválida.")
+    
+    if contador > 0:
+        print(f"El promedio de los {contador} números es: {suma / contador}")
+    else:
+        print("No se ingresaron valores para calcular.")
 def main():
     while True:
         mostrar_menu()
@@ -59,21 +98,4 @@ def main():
         else:
             print("Opción no válida. Intente de nuevo.")
 
-if __name__ == "__main__":
-    main()
-def calcular_factorial():
-    try:
-        num = int(input("Ingrese un número entero para calcular su factorial: "))
-        if num < 0:
-            print("No existe el factorial de números negativos.")
-        else:
-            print(f"El factorial de {num}! es: {math.factorial(num)}")
-    except ValueError: print("Error: Debe ser un número entero.")
 
-def tablas_multiplicar():
-    try:
-        tabla = int(input("¿Qué tabla desea ver? (Seleccione el número): "))
-        print(f"\n--- Tabla del {tabla} ---")
-        for i in range(1, 11):
-            print(f"{tabla} x {i} = {tabla * i}")
-    except ValueError: print("Error: Ingrese un número válido.")
