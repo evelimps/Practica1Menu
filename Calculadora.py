@@ -83,7 +83,18 @@ def main():
     while True:
         mostrar_menu()
         opcion = input("\nSeleccione una opción (1-9): ")
-        
+        def maximo_minimo():
+    print("\n--- MÁXIMO Y MÍNIMO ---")
+    try:
+        n = int(input("¿Cuántos números ingresará?: "))
+        if n <= 0: return
+        numeros = []
+        for i in range(1, n + 1):
+            numeros.append(int(input(f"Ingrese entero {i}: ")))
+        print(f"\nValor Máximo: {max(numeros)}")
+        print(f"Valor Mínimo: {min(numeros)}")
+        print(f"Total de valores introducidos: {len(numeros)}")
+    except ValueError: print("Error: Solo se permiten números enteros.")
         if opcion == '1': suma_n_numeros()
         elif opcion == '2': producto_n_numeros()
         elif opcion == '3': division()
