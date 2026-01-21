@@ -78,7 +78,7 @@ def promedio_serie():
     if contador > 0:
         print(f"El promedio de los {contador} números es: {suma / contador}")
     else:
-        print("No se ingresaron valores para calcular.")
+        print("No se ingresaron valores para calcularr.")
 def main():
     while True:
         mostrar_menu()
